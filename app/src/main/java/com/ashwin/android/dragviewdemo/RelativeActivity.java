@@ -22,7 +22,6 @@ public class RelativeActivity extends AppCompatActivity {
     private int yDelta;
 
     private final class ChoiceTouchListener implements View.OnTouchListener {
-
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             final int x = (int) event.getRawX();
@@ -56,6 +55,7 @@ public class RelativeActivity extends AppCompatActivity {
                     break;
 
                 case MotionEvent.ACTION_UP:
+                    Log.w("drag-demo", "action_up");
                     v.performClick();
                     break;
             }
